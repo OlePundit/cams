@@ -15,6 +15,46 @@ body {
 	background:#0A0A0A!important;	
 	position:relative;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+
+.countdown {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.countdown div {
+    font-size: 1.2rem;
+    width: 100px;
+}
+
+#subscribe-form {
+    display: flex;
+    justify-content: center;
+}
+
+input[type="email"] {
+    padding: 0.5rem;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 0.5rem;
+}
+
+
+
 
 .head-shape {margin:0 auto;background: #0A0A0A; position:relative; margin-top:8px; overflow:hidden; }
 .head-shape form .me-2{
@@ -77,6 +117,7 @@ header .free-join{
 }
 header .nav-link{
 	color:#fff;
+	margin-bottom: 15px;
 }
 header .other-menu{
 	border:1px solid #ff2363;
@@ -123,14 +164,23 @@ header .second-nav{
 	justify-content: center;
 	margin-top: 40px;
 }
-.hero-banner ul li{
+.hero-banner ul li a{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	color:#fff;
 	margin-right: 15px;
+	text-decoration: none;
 
 }
+
+.hero-banner ul li a:hover{
+	color:#4cd964;
+	text-decoration: none;
+    transform: translateY(-3px); /* Adjust the value to move it up slightly */
+
+}
+
 .hero-banner .banner-wrap{
 	margin:60px 0px;
 }
@@ -156,6 +206,19 @@ header .second-nav .nav-link .dot{
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
+}
+.fa-phone{
+	color: #007FFF;
+}
+.fa-video-camera{
+	color: #007FFF!important;
+}
+.fa-trophy{
+	color:#FFD700!important;
+}
+.fa-star{
+	color:#FFD700!important;
+
 }
 .input-group-text {
     display: flex;
@@ -348,8 +411,8 @@ nav {  float:left; z-index:501; margin-top:61px;}
 	padding:0;
 }
 .featured-mod img {
-    width: 300px;
-    height: 300px;
+    width: 300px!important;
+    height: 300px!important;
     object-fit: cover;
 }
 .featured-mod h4{
@@ -533,7 +596,12 @@ input[type=checkbox], input[type=radio]{
 	align-items: center;
     margin-bottom: 20px;
 	color:#fff;
+	flex-direction: row;
 }
+.grid_4 .header-title .marg1 .fa{
+	color:#007FFF;
+}
+
 .grid_4 .header-title a i{
     margin-left: 5px;
 }
@@ -545,6 +613,7 @@ input[type=checkbox], input[type=radio]{
     transform: translate(-50%, -50%); /* Center the text */
     color: white; /* Text color */
     z-index: 10; /* Ensure it appears above the overlay */
+	text-align: center;
 }
 .grid_4{
 	margin:auto!important;
@@ -552,6 +621,18 @@ input[type=checkbox], input[type=radio]{
 	display: flex!important;
 	flex-direction: column;
 	float: none!important;
+}
+.grid_4 a{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-decoration: none;
+	transition: color 0.2s ease, transform 0.2s ease;
+	justify-content: center;
+}
+.grid_4 a:hover{
+	transform: translateY(-3px);
+	text-decoration: none;
 }
 .select-1 {width:271px; float:left; }
 

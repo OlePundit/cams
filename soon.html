@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Our Website is Coming Soon</h1>
+        <p>We’re working hard to give you the best experience. Stay tuned!</p>
+        <div class="countdown">
+            <div><span id="days">00</span> Days</div>
+            <div><span id="hours">00</span> Hours</div>
+            <div><span id="minutes">00</span> Minutes</div>
+            <div><span id="seconds">00</span> Seconds</div>
+        </div>
+        <form id="subscribe-form">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Notify Me</button>
+        </form>
+    </div>
+
+    <script>
+        const countdownDate = new Date("December 31, 2024 23:59:59").getTime();
+
+        const countdownTimer = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                document.querySelector(".countdown").innerText = "We're Live!";
+            }
+        }, 1000);
+
+    </script>
+
+</body>
+</html>
