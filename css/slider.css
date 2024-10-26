@@ -1,0 +1,29 @@
+* {
+	padding:0;
+	margin:0;
+}
+
+.slider {
+	width:620px;
+	height:451px;
+	position:relative;
+	z-index:1;
+	float:left;
+}
+.items {
+	display:none;
+}
+
+.pags {
+	position:absolute;
+	top:433px;
+	left:10px;
+	z-index:999;
+	width:348px;
+	background:url(../images/op80.png) 0 0 repeat;	
+	padding:13px 0 13px 272px;
+}
+.pags li { float:left; margin-left:6px; height:14px;}
+.pags li a { background:url(../images/op24.png) 0 0 repeat; width:14px; display:inline-block; height:14px; }
+.pags li.current a , .pagination li:hover a { background:#53c9f6;}
+
