@@ -11,10 +11,13 @@ body {
 	font-size:12px; 
 	line-height:19px;
 	color:#6d6d6d;
-	min-width:960px;
 	background:#0A0A0A!important;	
 	position:relative;
 }
+.nav-item{
+	margin-bottom:10px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -26,6 +29,7 @@ body {
     padding: 2rem;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+	width:100%!important;
 }
 
 
@@ -94,7 +98,7 @@ transition: all 0.2s ease;
 .clear {clear:both; line-height:0; font-size:0; width:100%;}
 .wrapper {width:100%; overflow:hidden; position:relative}
 .extra-wrap {overflow:hidden;}
-.container {width:100%;}
+.container {width:100%!important;}
 .reg {text-transform:uppercase;}
 .right {text-align:right;}
 .left {text-align:left;}
@@ -135,6 +139,7 @@ header .second-menu{
 }
 header .second-nav{
 	margin-top:0px!important;
+	margin-bottom: 50px;
 }
 
 .hero-banner {
@@ -316,7 +321,7 @@ nav {  float:left; z-index:501; margin-top:61px;}
     display: inline-block; /* Allow the container to wrap the image */
 }
 .swiper {
-  width: 600px;
+  width: 100%;
   height: 500px;
 }
 .swiper .swiper-slide{
@@ -804,9 +809,43 @@ a.icon-3:hover {}
 a.icon-4 {float:left; background:url(../images/icon_04.png) 0 0 no-repeat #f6f6f6; width:33px; height:32px;  margin-left:14px; display:inline-block;}
 a.icon-4:hover {}
 
-
-
-
+@media(max-width:768px){
+	.navbar .phone{
+		display: flex;
+		justify-content: space-between;
+		width:80%;
+	}
+	.head-shape form{
+		width: 100%;
+	}
+	.navbar-brand .img{
+		width:100%!important;
+	}
+	.hero-banner ul {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		margin-top: 40px;
+	}
+	.container_12 {
+		width: 100% !important;
+		display: flex;
+		justify-content: center;
+	}
+	.hero-banner ul li a {
+		margin-bottom: 15px;
+	}
+	.grid_4 a {
+		margin-bottom: 30px;
+		
+	}
+	.grid_4{
+		width:100%!important;
+	}
+}
+.container{
+	max-width:100%!important;
+}
 /****************************footer************************/
 footer {
 	width:100%;
@@ -817,7 +856,7 @@ footer {
 
 .footer-block {width:100%; margin:0 auto; background:#0A0A0A; position:relative; z-index:102; display:inline-block; padding-top:20px; padding-bottom:22px;padding-left: 30px;}
 .footer-block img{
-	width: 250px;
+	width: 200px;
 }
 .footer-block .fab{
 	color:#fff;
