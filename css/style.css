@@ -49,15 +49,6 @@ body {
     justify-content: center;
 }
 
-input[type="email"] {
-    padding: 0.5rem;
-    width: 200px;
-    border: none;
-    border-radius: 5px;
-    margin-right: 0.5rem;
-}
-
-
 
 
 .head-shape {margin:0 auto;background: #0A0A0A; position:relative; margin-top:8px; overflow:hidden; }
@@ -116,23 +107,26 @@ transition: all 0.2s ease;
 header {width:95%; margin:0 auto; z-index:299; position:relative;}
 header .free-join{
 	background:#ff2363;
-	border-radius: 32px;
+	border-radius: 12px;
 	padding:10px 24px!important;
 }
 header .nav-link{
 	color:#fff;
 	margin-bottom: 15px;
 }
+.container-fluid{
+	align-items: baseline!important;
+}
 header .other-menu{
 	border:1px solid #ff2363;
-	border-radius: 32px;
+	border-radius: 12px;
 	padding:10px 24px!important;
 	margin: 0 12px;
 
 }
 header .second-menu{
 	background: #322D31;
-	border-radius: 32px;
+	border-radius: 12px;
 	padding:10px 24px!important;
 	margin: 0 12px;
 
@@ -150,6 +144,7 @@ header .second-nav{
     height: auto; /* Full viewport height */
 	border-radius: 16px;
 	width: 100%;
+	height:300px;
 }
 .container_12{
 	width:80%!important;
@@ -162,6 +157,8 @@ header .second-nav{
 .hero-banner h3{
 	text-align: center;
 	color:#fff;
+	font-size: 24px;
+	font-weight: 500;
 
 }
 .hero-banner ul{
@@ -169,14 +166,17 @@ header .second-nav{
 	justify-content: center;
 	margin-top: 40px;
 }
+.hero-banner ul li{
+	flex: 1 1 15%; /* Adjusts each item to take up approximately half the row */
+}
 .hero-banner ul li a{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	color:#fff;
+	color:#322D31;
 	margin-right: 15px;
 	text-decoration: none;
-
+	text-align: center;
 }
 
 .hero-banner ul li a:hover{
@@ -190,7 +190,7 @@ header .second-nav{
 	margin:60px 0px;
 }
 .hero-banner .fa{
-	color: #fff!important;
+	color: #ff2363!important;
 	font-size: 30px;
 	margin-bottom: 8px;
 }
@@ -201,6 +201,9 @@ header .second-nav .nav-link{
 	align-items: center;
 }
 header .second-nav .nav-link .fa{
+	margin-right: 8px;
+}
+header .second-nav .nav-link svg{
 	margin-right: 8px;
 }
 header .second-nav .nav-link .dot{
@@ -286,11 +289,12 @@ nav {  float:left; z-index:501; margin-top:61px;}
 	width:220px;
 	height:220px;
 	object-fit: cover;
+	border-radius: 10%;
 }
 .model-wrap .img-container{
-	border:1.5px solid #4cd964;
+	border:1.5px solid #007FFF;
 	padding:5px;
-	border-radius:50%;
+	border-radius:10%;
 }
 .model-wrap .img-label{
 	display: flex;
@@ -310,7 +314,7 @@ nav {  float:left; z-index:501; margin-top:61px;}
 	font-size: 16px;
 }
 .model-wrap .img-label h5{
-	color:#fff;
+	color:#808080;
 	font-size: 12px;
 }
 .model-wrap .img-label h5 span{
@@ -357,8 +361,8 @@ nav {  float:left; z-index:501; margin-top:61px;}
 	margin:auto;
 	display: inline-block;
 	justify-content: center;
-	border: 1px solid #4cd964;
-	border-radius: 50%;
+	border: 1px solid #007FFF;
+	border-radius: 10%;
 	padding:5px;
 }
 .swiper .swiper-slide .img-label .img-container .fa{
@@ -381,8 +385,8 @@ nav {  float:left; z-index:501; margin-top:61px;}
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border-radius: 50%;
-	background: #4cd964;
+	border-radius: 10%;
+	background: #007FFF;
 }
 .video-call .img-container .fa{
 
@@ -398,13 +402,13 @@ nav {  float:left; z-index:501; margin-top:61px;}
 	height:50px;
 	border:2px solid #fff;
 	padding:5px;
-	color:#fff;
+	color:#fff!important;
 	font-size: 30px;
 	font-weight: 600;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border-radius: 50%;
+	border-radius: 10%;
 	background: #3498db;
 }
 .featured-mod .img-label{
@@ -412,13 +416,14 @@ nav {  float:left; z-index:501; margin-top:61px;}
 }
 .featured-mod .img-container {
     border: 15px solid #322D31;
-    border-radius: 50%;
+    border-radius: 10%;
 	padding:0;
 }
 .featured-mod img {
     width: 300px!important;
     height: 300px!important;
     object-fit: cover;
+	border-radius: 5%;
 }
 .featured-mod h4{
 	font-size: 22px;
@@ -442,13 +447,39 @@ nav {  float:left; z-index:501; margin-top:61px;}
 .form{
 	margin-top: 50px!important;
 }
+.box{
+	display: inline-block;
+}
+.box .text {
+	display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line on smaller screens */
+    justify-content: space-around; /* Distributes items evenly */
+	position: absolute;
+	z-index: 999;
+	margin: 0;
+	left: 10%;
+	right: 10%;
+	bottom: -55%;
+	text-align: start;
+	width: 80%;
+	background: #fff;
+	border-radius: 16px;
+	padding:24px;
+}
 .form .form-wrap{
 	background: #322D31;
 	border-radius:16px;
 	padding: 24px 32px;
+	margin-left: 10px;
+}
+.form .form-wrap form{
+	display: flex;
+	flex-direction: column;
+	align-items: start;
 }
 .form .form-wrap form label{
 	color:#fff;
+	text-align: start;
 }
 .form .form-wrap form .checkbox{
 	width:30px;
@@ -456,7 +487,7 @@ nav {  float:left; z-index:501; margin-top:61px;}
 	background: #808080;
 }
 .form .form-wrap form .submit-btn{
-	border-radius: 16px;
+	border-radius: 12px;
 	background: #ff2363;
 	padding:7px 24px;
 	border: none;
@@ -464,7 +495,7 @@ nav {  float:left; z-index:501; margin-top:61px;}
 	width:100%;
 }
 .form .form-wrap form .apply-btn{
-	border-radius: 16px;
+	border-radius: 12px;
 	border: 1px solid #ff2363;
 	padding:7px 24px;
 	color:#fff;
@@ -481,20 +512,29 @@ input[type=checkbox], input[type=radio]{
 }
 .form {
     position: relative;
-    background: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.5)), 
-                url(../images/form-cover.jpeg) no-repeat center center;
-    background-size: cover; /* Ensures the image covers the full container */
     height: auto; /* Full viewport height */
 	border-radius: 16px;
 	width: 100%;
-	padding:32px;
+	padding:2px;
 	margin-top: 91px!important;
 }
 .form .info-wrap{
- display: flex;
- justify-content: center;
- align-items: center;
- flex-direction: column;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding-right:18px;
+	border-right:1px solid #fff;
+}
+.form .form-row{
+	padding: 36px;
+    border: 1px solid #fff;
+    border-radius: 16px;
+}
+.form .info-wrap img{
+	width:100%;
+	height:auto;
+	border-radius: 16px;
 }
 .form h3{
 	font-size: 40px;
@@ -564,6 +604,7 @@ input[type=checkbox], input[type=radio]{
 	width:300px;
 	height:300px;
 	object-fit: cover;
+	border-radius: 10%;
 }
 .swiper-button-next:after, .swiper-button-prev:after {
     color: #fff;
@@ -575,7 +616,7 @@ input[type=checkbox], input[type=radio]{
 	width:50px!important;
 	height:50px!important;
 	padding:10px!important;
-	border-radius: 50%;
+	border-radius: 10%;
 	border:1px solid #fff;
 
 }
@@ -585,7 +626,7 @@ input[type=checkbox], input[type=radio]{
     left: 0;
     width: 100%;
     height: 100%;
-	border-radius: 50%;
+	border-radius: 10%;
     backdrop-filter: blur(15px); /* Apply blur effect */
     z-index: 5; /* Ensure it appears below the text but above the image */
 }
@@ -741,6 +782,10 @@ transition: all 0.4s ease;
 	align-items: center;
 	margin-bottom: 20px;
 }
+.marg1 svg{
+	margin-right: 7px;
+	color: #007FFF;
+}
 .marg1 .fa{
 	color:#4cd964;
 	font-size: 18px;
@@ -824,13 +869,20 @@ a.icon-4:hover {}
 	.hero-banner ul {
 		display: flex;
 		justify-content: center;
-		flex-direction: column;
 		margin-top: 40px;
+	}
+	.hero-banner ul li{
+		flex: 1 1 45%; /* Adjusts each item to take up approximately half the row */
+
+	}
+	.hero-banner .banner-wrap {
+		margin: 30px 0px;
 	}
 	.container_12 {
 		width: 100% !important;
 		display: flex;
 		justify-content: center;
+		margin-bottom: 100px;
 	}
 	.hero-banner ul li a {
 		margin-bottom: 15px;
@@ -845,11 +897,52 @@ a.icon-4:hover {}
 	.video-call .img-container .fa {
 		bottom:30%!important;
 	}
+	.hero-banner {
+		height: 400px;
+	}
+	.model-wrap .img-label {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-right: 0px;
+		justify-content: center;
+	}
+	.swiper .swiper-slide .img-label .img-container .fa {
 
+		bottom: 29%;
+	}
+
+}
+@media(max-width:992px){
+	.form .info-wrap {
+		padding-right: 0px;
+		border-right: none;
+		margin-bottom: 32px;
+	}
+	.form .form-wrap {
+		margin-left: 0px;
+	}
+	.form .form-wrap form .submit-btn {
+		margin-top: 10px;
+	}
+}
+@media(min-width:768px) and (max-width:992px){
+	.navbar .phone{
+		display: flex;
+	}
+	.head-shape form .me-2 {
+		width: 100%;
+	}
+
+
+	.hero-banner {
+		height:350px;
+	}
 }
 .container{
 	max-width:100%!important;
 }
+
 /****************************footer************************/
 footer {
 	width:100%;
