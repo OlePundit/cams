@@ -11,7 +11,7 @@ body {
 	font-size:12px; 
 	line-height:19px;
 	color:#6d6d6d;
-	background:#0A0A0A!important;	
+	background:#3b3b3b!important;	
 	position:relative;
 }
 .nav-item{
@@ -27,7 +27,7 @@ body {
 .container {
     text-align: center;
     padding: 2rem;
-    background: rgba(0, 0, 0, 0.5);
+    background: #3b3b3b	;
     border-radius: 10px;
 	width:100%!important;
 }
@@ -966,7 +966,7 @@ footer {
 .footer-block h4{
 	text-align: start;
 }
-.footer-block {width:100%; margin:0 auto; background:#0A0A0A; position:relative; z-index:102; display:inline-block; padding-top:20px; padding-bottom:22px;padding-left: 30px;}
+.footer-block {width:100%; margin:0 auto; background:#322D31; position:relative; z-index:102; display:inline-block; padding-top:20px; padding-bottom:22px;padding-left: 30px;}
 .footer-block img{
 	width: 150px;
 }
