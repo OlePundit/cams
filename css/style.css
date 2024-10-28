@@ -564,7 +564,7 @@ input[type=checkbox], input[type=radio]{
   
   .grid-item img {
 	width: 100%;
-	height: auto;
+	height: 100%;
 	display: block;
 	object-fit: cover;
   }
@@ -954,6 +954,9 @@ a.icon-4:hover {}
 }
 .container{
 	max-width:100%!important;
+}
+.trending-posts-grid a{
+	height:100%;
 }
 
 /****************************footer************************/
