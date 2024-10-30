@@ -113,6 +113,10 @@ header .nav-link{
 	color:#fff;
 	margin-bottom: 15px;
 }
+header .nav-link:hover{
+	color:#4cd964;
+	margin-bottom: 15px;
+}
 .container-fluid{
 	align-items: baseline!important;
 }
@@ -290,14 +294,20 @@ nav {  float:left; z-index:501; margin-top:0px;}
 	height:220px;
 	object-fit: cover;
 	width:100%;
+	transition: transform 0.3s ease; /* Smooth transition for the zoom effect */
+
 }
 .model-wrap .img-container{
 	margin:0 5px;
-	border-radius:10%;
 	width:100%;
+	overflow: hidden; /* To hide the overflow when the image scales up */
+
+}
+.model-wrap .img-container:hover img {
+    transform: scale(1.1); /* Scale up the image */
 }
 .model-wrap .img-container .fa-phone{
-	font-size: 0.8rem;
+	font-size: 1.0rem!important;
 }
 .model-wrap .img-container .box{
 	display:inline-block;
@@ -371,9 +381,10 @@ nav {  float:left; z-index:501; margin-top:0px;}
 }
 .swiper .swiper-slide .img-label h4{
 	margin-top: 30px;
+	color:#0A0A0A;
 }
 .swiper .swiper-slide .img-label h5{
-	color:#fff;
+	color:#0A0A0A;
 	font-size: 16px;
 }
 .swiper .swiper-slide .img-label h5 span{
@@ -578,6 +589,8 @@ input[type=checkbox], input[type=radio]{
   .grid-item {
 	position: relative;
 	overflow: hidden;
+	overflow: hidden; /* To hide the overflow when the image scales up */
+
   }
   
   .grid-item.large {
@@ -590,11 +603,15 @@ input[type=checkbox], input[type=radio]{
 	height: 100%;
 	display: block;
 	object-fit: cover;
+	transition: transform 0.3s ease; /* Smooth transition for the zoom effect */
+
   }
   
   /* Optional - Add a hover effect */
   .grid-item:hover img {
 	filter: brightness(0.8);
+	transform: scale(1.1); /* Scale up the image */
+
   }
   
 .video-call .img-label h6{
@@ -978,6 +995,9 @@ a.icon-4:hover {}
 	}
 	.navbar img {
 		width: 150px;
+	}
+	.model-wrap .img-container .fa-phone{
+		font-size: 0.9rem!important;
 	}
 }
 @media(max-width:992px){
